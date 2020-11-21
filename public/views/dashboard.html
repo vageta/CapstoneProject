@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lng="en">
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Chatbot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link menu active" href="./dashboard.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="./addform.html">Add</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <span id="user-login"></span>
+                <button style="margin-left: 1em; float: right;" class="btn btn-primary btn-sm"
+                    id="logout">Logout</button>
+            </span>
+        </div>
+    </nav>
+    <div class="main-container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Student Code</th>
+                    <th scope="col">College</th>
+                    <th scope="col">Program</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody class="table-body" id="datatable">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="menuModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>
+                <b style="font-size: large;" id="title">Update Schedule</b>
+                <span class="close closeModal">&times;</span>
+                <hr />
+            </p>
+            <p>
+            <h5 style="text-decoration: underline;">Student Details</h5>
+            </p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Student Code</th>
+                        <th scope="col">College</th>
+                        <th scope="col">Program</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="studentName"></td>
+                        <td id="studentCode"></td>
+                        <td id="collegeName"></td>
+                        <td id="program"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr style="background-color: #dee2e6;" />
+            <h5 style="text-decoration: underline;">Student Program Details</h5>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Week Day</th>
+                        <th scope="col">Start Time</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Room No.</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody id="courseDataTable">
+                </tbody>
+            </table>
+            <hr />
+            <h5 style="text-decoration: underline;">Add Courses</h5>
+            <form autocomplete="off" id="menuForm">
+                <div class="row row-margin">
+                    <div class="col-lg-4 registerform-label">
+                        <label for="courseName" id="courseNameLabel">Course Name<em class="mandatory">*</em></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input id="courseName" type="text" name="courseName" class="form-control"
+                            placeholder="Course Name.." />
+                    </div>
+                </div>
+                <div class="row row-margin">
+                    <div class="col-lg-4 registerform-label">
+                        <label for="weekDay" id="weekDayLabel">Week Day<em class="mandatory">*</em></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input id="weekDay" type="text" name="weekDay" class="form-control" placeholder="Week Day.." />
+                    </div>
+                </div>
+                <div class="row row-margin">
+                    <div class="col-sm-4 registerform-label">
+                        <label for="startTime" id="startTimeLabel">Start Time<em class="mandatory">*</em></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input id="startTime" type="text" name="startTime" class="form-control"
+                            placeholder="Start Time.." />
+                    </div>
+                </div>
+                <div class="row row-margin">
+                    <div class="col-lg-4 registerform-label">
+                        <label for="duration" id="durationLabel">Duration<em class="mandatory">*</em></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input id="duration" type="text" name="duration" class="form-control"
+                            placeholder="Duration.." />
+                    </div>
+                </div>
+                <div class="row row-margin">
+                    <div class="col-lg-4 registerform-label">
+                        <label for="roomNo" id="roomNoLabel">Room No.<em class="mandatory">*</em></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input id="roomNo" type="text" name="roomNo" class="form-control" placeholder="Room No.." />
+                    </div>
+                </div>
+                <div class="row row-margin">
+                    <div class="col-lg-4 registerform-label">
+                        <label for="url" id="urlLabel">URL<em class="mandatory">*</em></label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input id="url" type="text" name="url" class="form-control" placeholder="url.." />
+                    </div>
+                </div>
+                <div class="row" style="float: right;">
+                    <div class="col-lg-12">
+                        <button type="button" id="addCourseDetailButton" class="btn btn-sm btn-primary">Save</button>
+                        <button type="button" class="closeModal btn btn-sm btn-primary">Close</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="../app.js" type="module"></script>
+<script src="../js/dashboard.js" type="module"></script>
+
+</html>

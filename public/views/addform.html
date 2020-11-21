@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lng="en">
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="../css/toastr.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Chatbot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link menu" href="./dashboard.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu active" href="./addform.html">Add</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <span id="user-login"></span>
+                <button style="margin-left: 1em; float: right;" class="btn btn-primary btn-sm"
+                    id="logout">Logout</button>
+            </span>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="register-box">
+            <div class="register-body">
+                <form autocomplete="off" id="studentDetailForm">
+                    <div class="row row-margin">
+                        <div class="col-lg-4 registerform-label">
+                            <label for="studentName" id="studentNameLable">Student Name<em class="mandatory">*</em>
+                            </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input id="studentName" type="text" name="studentName" class="form-control"
+                                placeholder="Student Name.." />
+                        </div>
+                    </div>
+                    <div class="row row-margin">
+                        <div class="col-lg-4 registerform-label">
+                            <label for="studentCode" id="studentCodeLable">Student Code<em class="mandatory">*</em>
+                            </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input id="studentCode" type="text" name="studentCode" class="form-control"
+                                placeholder="Student Code.." />
+                        </div>
+                    </div>
+                    <div class="row row-margin">
+                        <div class="col-lg-4 registerform-label">
+                            <label for="collegeName" id="collegeLabel">College<em class="mandatory">*</em>
+                            </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input id="collegeName" type="text" name="collegeName" class="form-control"
+                                placeholder="College Name.." />
+                        </div>
+                    </div>
+                    <div class="row row-margin">
+                        <div class="col-sm-4 registerform-label">
+                            <label for="program" id="programLable">Program<em class="mandatory">*</em>
+                            </label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input id="program" type="text" name="program" class="form-control" placeholder="Program" />
+                        </div>
+                    </div>
+                    <div class="row rightButton">
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="../js/toastr.min.js"></script>
+<script src="../app.js" type="module"></script>
+<script src="../js/addform.js" type="module"></script>
+<script src="../js/common.js"></script>
+
+</html>

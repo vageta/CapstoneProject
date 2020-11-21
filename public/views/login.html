@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lng="en">
+
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+		id="bootstrap-css">
+	<link rel="stylesheet" href="../css/login.css" />
+</head>
+
+<body>
+	<div class="login-box">
+		<div class="login-header">
+			Sign In
+		</div>
+		<hr />
+		<div class="login-body">
+			<form autocomplete="off" id="loginForm">
+				<div class="form-group">
+					<em class="error" id="usernameError">
+					</em>
+					<label for="username">Email
+						<em class="mandatory">*</em>
+					</label>
+					<input id="username" type="text" class="form-control" placeholder="Email..." />
+				</div>
+				<div class="form-group">
+					<em class="error" id="passwordError">
+						Required
+					</em>
+					<label for="password">Password
+						<em class="mandatory">*</em>
+					</label>
+					<input id="password" type="password" name="password" class="form-control"
+						placeholder="Password..." />
+				</div>
+				<button type="submit" class="btn btn-sm btn-primary">Login</button>
+				<p id="signInError" style="color:red;margin-top: 1em;"></p>
+			</form>
+			<!-- <a href="#">I forgot my password</a>
+			<br /> -->
+			<!-- <p class="register-link">
+				<a href="/SignUp" class="text-center">Register?</a>
+			</p> -->
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="../app.js" type="module"></script>
+</body>
+
+</html>
