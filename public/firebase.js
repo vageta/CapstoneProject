@@ -1,10 +1,10 @@
 export default {
-    apiKey: "AIzaSyAyiz-R_eLjyNTjXg51DJ50LvMbtPlR7FI",
-    authDomain: "chatbot-78ded.firebaseapp.com",
-    databaseURL: "https://chatbot-78ded.firebaseio.com",
-    projectId: "chatbot-78ded",
-    storageBucket: "chatbot-78ded.appspot.com",
-    messagingSenderId: "7000737139",
-    appId: "1:7000737139:web:b5f96d159f622da13c3106",
-    measurementId: "G-8VZXPT328X"
+    apiKey: "AIzaSyARA4YgkTddqTlAt_pWyaoLRv4dVZbBtgY",
+    authDomain: "capstone-10ce4.firebaseapp.com",
+    databaseURL: "https://capstone-10ce4-default-rtdb.firebaseio.com",
+    projectId: "capstone-10ce4",
+    storageBucket: "capstone-10ce4.appspot.com",
+    messagingSenderId: "484367587630",
+    appId: "1:484367587630:web:72da0951a7ede7f76942bf",
+    measurementId: "G-C7C8P8W8PD"
 }

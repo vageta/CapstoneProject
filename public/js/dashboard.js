@@ -6,12 +6,13 @@ let studentId = null;
 
 function init() {
     const sUser = firebase.auth().currentUser.uid;
-
+    $(".loading").hide();
     firebase.database().ref("Students/" + sUser).on("value", (snapshot) => {
+        console.log(snapshot);
         const oItems = snapshot.val();
         const aKeys = oItems != null ? Object.keys(oItems) : [];
         $("#datatable").html("");
-        $(".loading").hide();
+       
         for (let n = 0; n < aKeys.length; n++) {
             let row =
                 `<tr id="${oItems[aKeys[n]].studentCode}">

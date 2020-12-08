@@ -30,7 +30,7 @@ $("#loginForm").on("submit", (evt) => {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        $("#signInError").html("Error : " + errorMessage)
+        $("#signInError").html("Error : Invalid username and password");
         console.log(errorCode + " error " + errorMessage);
     });
 
